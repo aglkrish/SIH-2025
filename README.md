@@ -1,236 +1,204 @@
-# AyurSutra - Panchakarma Patient Management Software
+# 🏥 AyurSutra - Panchakarma Patient Management System
 
-A comprehensive patient management system designed specifically for Ayurveda practitioners and Panchakarma therapy management.
+> **A comprehensive healthcare management platform for Ayurvedic Panchakarma treatments, built for SIH 2025**
 
-## 🚀 Features
+[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![Node.js](https://img.shields.io/badge/Node.js-20-green?style=for-the-badge&logo=node.js)](https://nodejs.org/)
 
-- **Patient Management**: Complete patient profiles with health information and treatment history
-- **Appointment Scheduling**: Intelligent scheduling system for practitioners and patients
-- **Progress Tracking**: Monitor patient wellness metrics and treatment progress
-- **Analytics Dashboard**: Comprehensive analytics for practice management
-- **Secure Authentication**: JWT-based authentication with role-based access control
-- **Real-time Notifications**: Automated reminders and updates
-- **Responsive Design**: Mobile-first design that works on all devices
+## 🌟 Features
 
-## 🛠️ Tech Stack
+### 👥 **Dual Dashboard System**
+- **Patient Dashboard**: Session management, health tracking, messaging
+- **Practitioner Dashboard**: Patient management, treatment planning, analytics
 
-### Frontend
-- **Next.js 14** - React framework with App Router
-- **TypeScript** - Type-safe JavaScript
-- **Tailwind CSS** - Utility-first CSS framework
-- **Shadcn/ui** - Modern UI components
-- **Lucide React** - Beautiful icons
-- **Recharts** - Data visualization
-- **Sonner** - Toast notifications
+### 📅 **Appointment Management**
+- Real-time session booking and scheduling
+- Calendar integration with availability management
+- Automated reminders and notifications
+- Rescheduling and cancellation functionality
 
-### Backend
-- **Node.js** - JavaScript runtime
-- **Express.js** - Web framework
-- **JWT** - Authentication tokens
-- **bcryptjs** - Password hashing
-- **Helmet** - Security middleware
-- **CORS** - Cross-origin resource sharing
-- **Morgan** - HTTP request logger
+### 💬 **Communication System**
+- Real-time messaging between patients and practitioners
+- Notification center with multiple channels
+- Treatment updates and progress reports
 
-## 📋 Prerequisites
+### 📊 **Health Tracking**
+- Comprehensive health information management
+- Treatment progress monitoring
+- Dosha assessment and tracking
+- Wellness metrics and analytics
 
-Before you begin, ensure you have the following installed:
-- Node.js (v18 or higher)
-- npm or pnpm
-- Git
+### 💰 **Financial Management**
+- INR-based pricing system
+- Receipt generation and printing
+- Payment tracking and history
+- Treatment cost management
 
-## 🔧 Installation
+### 🎯 **Key Highlights**
+- ✅ **Functional Action Buttons**: Initial Consultation & Continue Treatment
+- ✅ **INR Currency**: All pricing in Indian Rupees (₹)
+- ✅ **Modern UI/UX**: Professional healthcare interface
+- ✅ **Responsive Design**: Works on all devices
+- ✅ **Real-time Updates**: Live messaging and notifications
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 20+
+- npm or yarn
+- MongoDB (optional for full functionality)
+
+### Installation
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd SIH-TRIAL-master
+   git clone https://github.com/aglkrish/SIH-2025.git
+   cd SIH-2025
    ```
 
 2. **Install dependencies**
    ```bash
-   # Frontend dependencies
    npm install
-   
-   # Backend dependencies
-   cd backend
-   npm install
-   cd ..
+   cd backend && npm install
    ```
 
-3. **Environment Setup**
-   
-   Create a `.env.local` file in the root directory:
-   ```env
-   # Frontend Environment Variables
-   NEXT_PUBLIC_API_URL=http://localhost:5000/api
-   NEXT_PUBLIC_FIREBASE_API_KEY=your_firebase_api_key_here
-   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain_here
-   NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_firebase_project_id_here
-   NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket_here
-   NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id_here
-   NEXT_PUBLIC_FIREBASE_APP_ID=your_firebase_app_id_here
-   NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=your_firebase_measurement_id_here
-   ```
-
-   Create a `.env` file in the backend directory:
-   ```env
-   # Backend Environment Variables
-   PORT=5000
-   NODE_ENV=development
-   FRONTEND_URL=http://localhost:3000
-   JWT_SECRET=your_super_secret_jwt_key_change_this_in_production
-   MONGODB_URI=mongodb://localhost:27017/ayursutra
-   CORS_ORIGIN=http://localhost:3000
-   ```
-
-4. **Start the development servers**
-   
-   **Option 1: Start both servers separately**
+3. **Start the development servers**
    ```bash
-   # Terminal 1 - Backend
-   cd backend
+   # Terminal 1 - Frontend
    npm run dev
    
-   # Terminal 2 - Frontend
-   npm run dev
+   # Terminal 2 - Backend
+   cd backend
+   npm start
    ```
 
-   **Option 2: Use the provided scripts**
-   ```bash
-   # Windows
-   start-full-stack.ps1
-   
-   # Or
-   start-project.bat
-   ```
+4. **Access the application**
+   - Frontend: http://localhost:3000
+   - Backend API: http://localhost:5001
 
-## 🔐 Security Features
+## 🏗️ Project Structure
 
-- **JWT Authentication**: Secure token-based authentication
-- **Password Hashing**: bcryptjs for secure password storage
-- **Input Validation**: Comprehensive form validation
-- **CORS Protection**: Configured cross-origin resource sharing
-- **Rate Limiting**: API rate limiting to prevent abuse
-- **Security Headers**: Helmet.js for security headers
-- **Environment Variables**: Sensitive data stored in environment variables
-
-## 🧪 Testing
-
-The application includes comprehensive error handling and validation:
-
-- **Form Validation**: Client-side and server-side validation
-- **Error Boundaries**: React error boundaries for graceful error handling
-- **Type Safety**: Full TypeScript implementation
-- **API Error Handling**: Proper error responses and status codes
-
-## 📱 Usage
-
-### For Patients
-1. Register/Login with patient role
-2. View upcoming sessions
-3. Track wellness progress
-4. Book new appointments
-5. Update health information
-
-### For Practitioners
-1. Register/Login with practitioner role
-2. Manage patient appointments
-3. View patient information
-4. Track practice analytics
-5. Schedule new appointments
-
-## 🔧 Development
-
-### Project Structure
 ```
-SIH-TRIAL-master/
-├── app/                    # Next.js app directory
-│   ├── auth/              # Authentication pages
-│   ├── dashboard/         # Dashboard pages
-│   └── globals.css        # Global styles
-├── components/            # React components
-│   ├── auth/             # Authentication components
-│   ├── dashboard/        # Dashboard components
-│   ├── layouts/          # Layout components
-│   └── ui/               # UI components
-├── contexts/             # React contexts
-├── hooks/                # Custom hooks
-├── lib/                  # Utility libraries
-├── types/                # TypeScript types
-├── backend/              # Backend server
-└── public/               # Static assets
+SIH-2025/
+├── app/                          # Next.js app directory
+│   ├── dashboard/
+│   │   ├── patient/             # Patient dashboard pages
+│   │   └── practitioner/        # Practitioner dashboard pages
+│   ├── auth/                    # Authentication pages
+│   └── api/                     # API routes
+├── components/                   # Reusable UI components
+│   ├── ui/                      # Shadcn/ui components
+│   ├── dashboard/               # Dashboard-specific components
+│   ├── dialogs/                 # Modal dialogs
+│   └── layouts/                 # Page layouts
+├── contexts/                     # React contexts
+├── hooks/                        # Custom React hooks
+├── lib/                          # Utility functions
+├── backend/                      # Node.js backend
+│   ├── models/                  # Database models
+│   ├── routes/                  # API routes
+│   └── server.js                # Main server file
+└── types/                        # TypeScript type definitions
 ```
 
-### Key Components
-- **AuthProvider**: Authentication context and state management
-- **AuthGuard**: Route protection based on user roles
-- **ErrorBoundary**: Error handling and recovery
-- **Loading**: Loading states and skeletons
-- **Validation**: Form validation utilities
+## 🎨 Technology Stack
+
+### Frontend
+- **Framework**: Next.js 14 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: Shadcn/ui
+- **State Management**: React Context API
+- **Icons**: Lucide React
+
+### Backend
+- **Runtime**: Node.js
+- **Framework**: Express.js
+- **Database**: MongoDB with Mongoose
+- **Authentication**: JWT
+- **Real-time**: WebSocket support
+
+## 📱 Key Pages & Features
+
+### Patient Features
+- **Dashboard**: Overview of sessions and health metrics
+- **Session Management**: Book, view, and manage appointments
+- **Health Profile**: Comprehensive health information
+- **Messaging**: Real-time communication with practitioners
+- **Progress Tracking**: Treatment progress and wellness metrics
+
+### Practitioner Features
+- **Patient Management**: View and manage patient information
+- **Appointment Scheduling**: Manage calendar and appointments
+- **Treatment Planning**: Create and update treatment plans
+- **Analytics**: Practice analytics and reporting
+- **Messaging**: Communicate with patients
+
+## 🔧 Configuration
+
+### Environment Variables
+Create a `.env.local` file in the root directory:
+
+```env
+NEXT_PUBLIC_API_URL=http://localhost:5001
+MONGODB_URI=mongodb://localhost:27017/ayursutra
+JWT_SECRET=your-jwt-secret
+```
+
+### Backend Configuration
+Create a `.env` file in the `backend` directory:
+
+```env
+PORT=5001
+MONGODB_URI=mongodb://localhost:27017/ayursutra
+JWT_SECRET=your-jwt-secret
+```
 
 ## 🚀 Deployment
 
-### Frontend (Vercel/Netlify)
-1. Connect your repository
+### Frontend (Vercel)
+1. Connect your GitHub repository to Vercel
 2. Set environment variables
-3. Deploy
+3. Deploy automatically on push
 
 ### Backend (Railway/Heroku)
-1. Connect your repository
+1. Connect your GitHub repository
 2. Set environment variables
-3. Deploy
+3. Deploy with automatic builds
 
-### Environment Variables for Production
-```env
-# Frontend
-NEXT_PUBLIC_API_URL=https://your-api-domain.com/api
-NEXT_PUBLIC_FIREBASE_API_KEY=your_production_firebase_key
-# ... other Firebase config
+## 📊 Demo Data
 
-# Backend
-NODE_ENV=production
-JWT_SECRET=your_very_secure_production_jwt_secret
-MONGODB_URI=your_production_mongodb_uri
-CORS_ORIGIN=https://your-frontend-domain.com
-```
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-1. **CORS Errors**
-   - Ensure CORS_ORIGIN matches your frontend URL
-   - Check that both servers are running
-
-2. **Authentication Issues**
-   - Verify JWT_SECRET is set correctly
-   - Check token expiration (24 hours default)
-
-3. **Build Errors**
-   - Run `npm run lint` to check for linting errors
-   - Ensure all TypeScript types are properly defined
-
-4. **Database Connection**
-   - Verify MongoDB URI is correct
-   - Ensure MongoDB is running (if using local instance)
-
-## 📄 License
-
-This project is licensed under the MIT License.
+The application includes comprehensive demo data for:
+- Sample patients and practitioners
+- Treatment sessions and appointments
+- Health information and progress tracking
+- Messaging history and notifications
 
 ## 🤝 Contributing
 
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+4. Submit a pull request
+
+## 📄 License
+
+This project is developed for SIH 2025 (Smart India Hackathon).
+
+## 👥 Team
+
+- **Developer**: Krish Agarwal
+- **Project**: AyurSutra - Panchakarma Patient Management System
+- **Event**: SIH 2025
 
 ## 📞 Support
 
-For support and questions, please contact the development team.
+For support or questions, please contact:
+- Email: [your-email@example.com]
+- GitHub: [@aglkrish](https://github.com/aglkrish)
 
 ---
 
-**Note**: This is a development version. For production deployment, ensure all security measures are properly configured and environment variables are set correctly.
+**Built with ❤️ for SIH 2025**
