@@ -216,7 +216,6 @@ export function SessionsProvider({ children }: { children: ReactNode }) {
       
       // Save demo data to localStorage
       localStorage.setItem(`sessions_${user.id}`, JSON.stringify(demoPastSessions))
-      }
     } catch (err) {
       console.error('Error loading sessions:', err)
       setError(err instanceof Error ? err.message : 'Failed to load sessions')
