@@ -1,0 +1,144 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated to authentic Ayurveda-inspired color palette with natural tones */
+  --background: oklch(0.98 0.01 85); /* Warm beige #f5f5dc */
+  --foreground: oklch(0.25 0.02 30); /* Deep brown #3e2723 */
+  --card: oklch(1 0 0); /* Pure white for cards */
+  --card-foreground: oklch(0.35 0.03 25); /* Earthy brown #5d4037 */
+  --popover: oklch(1 0 0); /* White */
+  --popover-foreground: oklch(0.25 0.02 30); /* Deep brown */
+  --primary: oklch(0.55 0.15 145); /* Natural emerald green #4caf50 */
+  --primary-foreground: oklch(1 0 0); /* White */
+  --secondary: oklch(0.35 0.03 25); /* Earthy brown #5d4037 */
+  --secondary-foreground: oklch(1 0 0); /* White */
+  --muted: oklch(0.95 0.01 85); /* Light beige #f9f7f4 */
+  --muted-foreground: oklch(0.45 0.02 30); /* Medium brown #6d4c41 */
+  --accent: oklch(0.75 0.08 65); /* Soft gold #d4af37 */
+  --accent-foreground: oklch(0.25 0.02 30); /* Deep brown */
+  --destructive: oklch(0.55 0.25 25); /* Natural red for errors #d32f2f */
+  --destructive-foreground: oklch(1 0 0); /* White */
+  --border: oklch(0.85 0.02 85); /* Light brown border #e0d5c7 */
+  --input: oklch(1 0 0); /* White input background */
+  --ring: oklch(0.55 0.15 145 / 0.5); /* Primary with opacity */
+  --chart-1: oklch(0.55 0.15 145); /* Primary emerald */
+  --chart-2: oklch(0.35 0.03 25); /* Earthy brown */
+  --chart-3: oklch(0.75 0.08 65); /* Soft gold */
+  --chart-4: oklch(0.95 0.01 85); /* Light beige */
+  --chart-5: oklch(0.65 0.12 120); /* Sage green #81c784 */
+  --radius: 0.5rem;
+  --sidebar: oklch(0.95 0.01 85); /* Light beige sidebar */
+  --sidebar-foreground: oklch(0.25 0.02 30); /* Deep brown text */
+  --sidebar-primary: oklch(1 0 0); /* White primary */
+  --sidebar-primary-foreground: oklch(0.25 0.02 30); /* Deep brown */
+  --sidebar-accent: oklch(0.75 0.08 65); /* Soft gold accent */
+  --sidebar-accent-foreground: oklch(0.25 0.02 30); /* Deep brown */
+  --sidebar-border: oklch(0.85 0.02 85); /* Light brown border */
+  --sidebar-ring: oklch(0.55 0.15 145 / 0.5); /* Primary with opacity */
+  --font-inter: "Inter", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+}
+
+.dark {
+  /* Updated dark mode to maintain Ayurveda theme with warmer tones */
+  --background: oklch(0.12 0.02 30); /* Dark brown background */
+  --foreground: oklch(0.95 0.01 85); /* Light beige text */
+  --card: oklch(0.18 0.02 30); /* Dark brown card background */
+  --card-foreground: oklch(0.95 0.01 85); /* Light beige text on cards */
+  --popover: oklch(0.12 0.02 30); /* Dark brown popover */
+  --popover-foreground: oklch(0.95 0.01 85); /* Light beige text */
+  --primary: oklch(0.65 0.15 145); /* Brighter emerald for dark mode */
+  --primary-foreground: oklch(0.12 0.02 30); /* Dark brown text on primary */
+  --secondary: oklch(0.25 0.02 30); /* Dark brown secondary */
+  --secondary-foreground: oklch(0.95 0.01 85); /* Light beige text */
+  --muted: oklch(0.25 0.02 30); /* Dark brown muted */
+  --muted-foreground: oklch(0.75 0.01 85); /* Medium beige */
+  --accent: oklch(0.25 0.02 30); /* Dark brown accent */
+  --accent-foreground: oklch(0.95 0.01 85); /* Light beige text */
+  --destructive: oklch(0.45 0.2 25); /* Darker destructive */
+  --destructive-foreground: oklch(0.65 0.25 25); /* Lighter destructive text */
+  --border: oklch(0.25 0.02 30); /* Dark brown border */
+  --input: oklch(0.25 0.02 30); /* Dark brown input */
+  --ring: oklch(0.55 0.15 145 / 0.5); /* Primary ring */
+  --chart-1: oklch(0.65 0.15 145); /* Chart colors for dark mode */
+  --chart-2: oklch(0.75 0.08 65);
+  --chart-3: oklch(0.85 0.05 85);
+  --chart-4: oklch(0.45 0.02 30);
+  --chart-5: oklch(0.75 0.12 120);
+  --sidebar: oklch(0.18 0.02 30); /* Dark brown sidebar */
+  --sidebar-foreground: oklch(0.95 0.01 85); /* Light beige sidebar text */
+  --sidebar-primary: oklch(0.65 0.15 145); /* Sidebar primary */
+  --sidebar-primary-foreground: oklch(0.95 0.01 85); /* Light beige text */
+  --sidebar-accent: oklch(0.25 0.02 30); /* Dark brown sidebar accent */
+  --sidebar-accent-foreground: oklch(0.95 0.01 85); /* Light beige text */
+  --sidebar-border: oklch(0.25 0.02 30); /* Dark brown border */
+  --sidebar-ring: oklch(0.55 0.15 145 / 0.5); /* Primary ring */
+}
+
+@theme inline {
+  /* Updated font variables to use Inter and Poppins */
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-poppins);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
