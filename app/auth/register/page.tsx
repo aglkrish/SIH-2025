@@ -217,19 +217,20 @@ export default function RegisterPage() {
                       </Button>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg border border-gray-200">
                     <Checkbox
                       id="patient-terms"
                       checked={agreedToTerms}
                       onCheckedChange={(checked) => setAgreedToTerms(checked as boolean)}
+                      className="mt-0.5"
                     />
-                    <Label htmlFor="patient-terms" className="text-sm">
+                    <Label htmlFor="patient-terms" className="text-sm leading-relaxed">
                       I agree to the{" "}
-                      <Link href="/terms" className="text-primary hover:underline">
+                      <Link href="/terms" className="text-primary hover:underline font-medium">
                         Terms of Service
                       </Link>{" "}
                       and{" "}
-                      <Link href="/privacy" className="text-primary hover:underline">
+                      <Link href="/privacy" className="text-primary hover:underline font-medium">
                         Privacy Policy
                       </Link>
                     </Label>
@@ -358,19 +359,20 @@ export default function RegisterPage() {
                       </Button>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg border border-gray-200">
                     <Checkbox
                       id="practitioner-terms"
                       checked={agreedToTerms}
                       onCheckedChange={(checked) => setAgreedToTerms(checked as boolean)}
+                      className="mt-0.5"
                     />
-                    <Label htmlFor="practitioner-terms" className="text-sm">
+                    <Label htmlFor="practitioner-terms" className="text-sm leading-relaxed">
                       I agree to the{" "}
-                      <Link href="/terms" className="text-primary hover:underline">
+                      <Link href="/terms" className="text-primary hover:underline font-medium">
                         Terms of Service
                       </Link>{" "}
                       and{" "}
-                      <Link href="/privacy" className="text-primary hover:underline">
+                      <Link href="/privacy" className="text-primary hover:underline font-medium">
                         Privacy Policy
                       </Link>
                     </Label>

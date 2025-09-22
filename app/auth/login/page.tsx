@@ -50,21 +50,8 @@ export default function LoginPage() {
     try {
       setIsLoading(true)
       
-      // Create role-specific email for testing
-      let testEmail = email
-      if (activeTab === 'practitioner') {
-        // Force practitioner role by using a practitioner email
-        testEmail = email.includes('@') ? email : `${email}@practitioner.com`
-        if (!testEmail.includes('practitioner') && !testEmail.includes('doctor') && !testEmail.includes('dr.') && !testEmail.includes('prac') && !testEmail.includes('admin') && !testEmail.includes('staff')) {
-          testEmail = `practitioner.${email}@clinic.com`
-        }
-      } else {
-        // Force patient role by using a patient email
-        testEmail = email.includes('@') ? email : `${email}@patient.com`
-        if (testEmail.includes('practitioner') || testEmail.includes('doctor') || testEmail.includes('dr.') || testEmail.includes('prac') || testEmail.includes('admin') || testEmail.includes('staff')) {
-          testEmail = `patient.${email}@user.com`
-        }
-      }
+      // Use the email as-is for login
+      const testEmail = email
       
       console.log('Original email:', email, 'Test email:', testEmail, 'Role:', activeTab)
       
@@ -127,7 +114,7 @@ export default function LoginPage() {
                     <Input
                       id="patient-email"
                       type="email"
-                      placeholder="Enter your email (any email works)"
+                      placeholder="Enter your email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
@@ -185,7 +172,7 @@ export default function LoginPage() {
                     <Input
                       id="practitioner-email"
                       type="email"
-                      placeholder="Enter your email (any email works)"
+                      placeholder="Enter your email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
